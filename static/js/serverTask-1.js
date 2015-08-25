@@ -12,6 +12,7 @@
 		$(node).append('<div class="filterContainer-1"><input class="filter"  placeholder="Фильтровать"><span class="lupa"></span><span class="text-delete">⊗</span></div><div class="table"></div>');
 
 		$.ajax({
+			url: './todos/',
 			success: function(response) {
 				Todo = response; 
 				response.forEach(function(element, index) {
