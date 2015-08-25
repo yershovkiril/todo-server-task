@@ -20,7 +20,7 @@
 		$('.tableHead').append('<table><tr><td class="taskItem head">Что надо сделать</td><td class="taskTerm head">Когда</td><td class="taskDone head">Сделано</td></tr></table>');
 		
 		$.ajax({
-			url: 'http://localhost:5000/todos/',
+			url: './todos/',
 			success: function(response) {
 				return response;
 			}
@@ -127,7 +127,7 @@
 			table[table.length - 1].remove();
 			taskList.prototype.addTask(inputText);
 			$('.tasksList button')[0].disabled = false;
-			$.getJSON('http://localhost:5000/todos/' + nameActiveCategory).then(function(TodoList) {
+			$.getJSON('./todos/' + nameActiveCategory).then(function(TodoList) {
 				TodoList.tasks.push({
 					description: inputText,
 					done: false
@@ -136,7 +136,7 @@
 				return TodoList
 			}).then(function(TodoList) {
 				return $.ajax({
-					url: 'http://localhost:5000/todos/' + nameActiveCategory,
+					url: './todos/' + nameActiveCategory,
 					method: 'PUT',
 					data: {
 						todo: JSON.stringify(TodoList)
@@ -168,7 +168,7 @@
 		$('.tableTask table').remove();
 		$('.loader').css('display', 'block');
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://localhost:5000/todos/' + text, true);
+		xhr.open('GET', './todos/' + text, true);
 		xhr.send();
 		xhr.onreadystatechange = function() {
 			if (xhr.status === 200 && xhr.readyState === 4) {
@@ -186,7 +186,7 @@
 				taskList.prototype.showCalendar();
 			}
 		};
-		$.get('http://localhost:5000/todos/' + text, function(response) {
+		$.get('./todos/' + text, function(response) {
 			TodoList = response;
 		});
 	};
@@ -234,7 +234,7 @@
 		});
 		TodoList.tasks = tasks;
 		$.ajax({
-			url: 'http://localhost:5000/todos/' + nameActiveCategory,
+			url: './todos/' + nameActiveCategory,
 			method: 'PUT',
 			data: {
 				todo: JSON.stringify(TodoList)
@@ -267,7 +267,7 @@
 		$(".calendar").on('click', function(event) {
 			var nameActiveCategory = $('table.active').text();
 			nameActiveCategory = nameActiveCategory.substr(0, nameActiveCategory.length - 2);
-			$.get('http://localhost:5000/todos/' + nameActiveCategory, function(response) {
+			$.get('./todos/' + nameActiveCategory, function(response) {
 				TodoList = response;
 				console.log(TodoList.tasks)
 			});
@@ -303,7 +303,7 @@
 					TodoList.tasks[index].term = element.textContent;
 				});
 				$.ajax({
-					url: 'http://localhost:5000/todos/' + nameActiveCategory,
+					url: './todos/' + nameActiveCategory,
 					method: 'PUT',
 					data: {
 						todo: JSON.stringify(TodoList)

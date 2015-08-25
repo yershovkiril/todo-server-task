@@ -12,7 +12,6 @@
 		$(node).append('<div class="filterContainer-1"><input class="filter"  placeholder="Фильтровать"><span class="lupa"></span><span class="text-delete">⊗</span></div><div class="table"></div>');
 
 		$.ajax({
-			url: 'http://localhost:5000/todos/',
 			success: function(response) {
 				Todo = response; 
 				response.forEach(function(element, index) {
@@ -109,9 +108,9 @@
 			target[0].firstChild.textContent = inputText;
 			$.ajax({
 				type: 'delete',
-				url: 'http://localhost:5000/todos/' + textField
+				url: './todos/' + textField
 			});
-			$.post('http://localhost:5000/todos/' + inputText, {
+			$.post('./todos/' + inputText, {
 				todo: JSON.stringify({
 					title: inputText + " todo list",
 					created: new Date().toString(),
@@ -147,7 +146,7 @@
 
 		$.ajax({
 			type: 'delete',
-			url: 'http://localhost:5000/todos/' + inputText,
+			url: './todos/' + inputText,
 		});
 	};
 
@@ -176,7 +175,7 @@
 				table[table.length - 1].remove();
 				application.prototype.addCategory(inputText);
 				$('.containerCategory button')[0].disabled = false;
-				$.post('http://localhost:5000/todos/' + inputText, {
+				$.post('./todos/' + inputText, {
 					todo: JSON.stringify({
 						title: inputText + " todo list",
 						created: new Date().toString(),
