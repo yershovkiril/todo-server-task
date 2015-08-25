@@ -1,0 +1,267 @@
+.app{
+	
+	width: 65%;
+	height: 270px;
+}
+.tasksList, .containerCategory{
+	float: left;
+	display: inline-block;
+	height: 270px;
+	border: 2px solid black;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.tools-panel{
+	display: none;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+  	width: 45px;
+    height: 45px;
+}
+
+div.hasDatepicker{
+	position: absolute;
+    top: 96px;
+    right: 717px;
+    font-size: 9px;
+    z-index: 100;
+    display: none;
+}
+table.ui-datepicker-calendar {
+	border: none;
+}
+textarea {
+	max-width: 60%;
+}
+.taskItem>.cancel{
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+}
+.taskItem>.saveList {
+	bottom: 10px;
+}
+td.taskItem {
+	position: relative;
+}
+.element-description{
+	display: block;
+    width: 87%;
+}
+.toolsTask-panel{
+	position: absolute;
+	top: -2px;
+	right: -10px;
+	display: none;
+}
+
+.containerCategory{
+	width: 35%;
+	border: 2px solid black;
+	border-right: 1px solid black;
+	padding-left: 13px;
+	position: relative;
+}
+
+.cancel{
+	display: inline-block;
+	float: right;
+	color: blue;
+	border-bottom: 1px solid blue;
+	font-size: 15px;
+}
+.saveList{
+	display: inline-block;
+	position: absolute;
+	right: 61px;
+	color: blue;
+	border-bottom: 1px solid blue;
+	font-size: 15px;
+}
+button{
+	display: block;
+	text-align: center;
+	width: 90%;
+    border-radius: 4px;
+    border: 2px solid black;
+    margin: 12px auto;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0
+}
+td>input{
+	width: 40%;
+}
+.tasksList{
+	border-left: 1px solid black;
+	width: 60%;
+}
+.filter{
+	border-radius: 10px;
+	border: 2px solid black;
+	width: 77%;
+	position: relative;	
+	padding-left: 30px;
+	font-style: italic;
+}
+
+.lupa {
+	background: url('../lupa.png') no-repeat;
+	background-position: 0 0;
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    top: 2px;
+    left: 9px;
+    cursor: pointer;
+}
+table.active{
+	background-color: #CCCCCC;
+	position: relative;
+}
+
+
+td.taskTerm{
+	width: 20%;
+	border-right: 1px solid black;
+	text-align: center;
+}
+
+.table1 > div.datepicker {
+	position: absolute;
+}
+span.calendar{
+	width: 25px;
+    height: 40px;
+    margin: -20px 0 0px -10px;
+    background: url('../date.png') center center no-repeat;
+    position: absolute;
+}		
+table.active:after{
+	position: absolute;
+	content: '►';
+	right: 5px;
+	top: 15px;
+}
+table{
+	border:2px solid black;
+	border-left: none;
+	width: 100%;
+	border-bottom: 0;
+	height: 45px;
+	padding-left: 5px;
+	cursor: pointer;
+	position: relative;
+	z-index: 100;
+}
+
+.loader{
+	display: block;
+	position: absolute;
+    top: 50%;
+    left: 49%;
+}
+span.tool-active{
+	display: inline-block;
+	z-index: 10;
+}
+
+.pencil-tool{
+	display: block;
+	position: absolute;
+	top: 10px;
+    right: 26px;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+.removal-tool{
+	display: block;
+	position: absolute;
+	top: 13px;
+    right: 8px;
+    color: blue;
+    border-bottom: 1px solid blue;	
+}
+.table{
+	margin-top: 10px;
+	overflow-y: scroll;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	max-height: 200px;
+}
+table:nth-child(1){
+	border-top: 0;
+};
+
+td.head{
+	text-align: center;
+}
+td.taskDone{
+	text-align: center;
+}
+
+td.taskItem{
+	width: 60%;
+	border-right: 1px solid black;
+}
+.tableHead table:first-child{
+	background: #CCCCCC;
+}	
+.table1{
+	margin-top: 10px;
+	height: 74%;
+	overflow-y: scroll;
+	position: relative;
+}
+
+.tasksList input {
+	width: 45%;
+	position: relative;
+}
+.tasksList input[type='checkbox']{
+	display: inline-block;
+    width: 20px;
+}
+
+.tasksList{
+	position: relative;
+}
+.tasksList button {
+	margin-left: 5%;
+}
+.text-delete{
+	position: absolute;
+    top: -6px;
+    right: 6px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.filterContainer-1, .filterContainer-2{
+	position: relative;
+	display: inline;
+}
+
+.filterContainer-2{
+	margin-left: 13px;
+}
+
+.head:before {
+	content: '▼';
+	margin-right: 3px;
+	font-size: 13px;
+};
+
+.tableTask{
+	display: none;
+
+}
+
+.tableTask > table{
+	border-top: 0;
+	border-bottom: 2px solid black;
+};
+
