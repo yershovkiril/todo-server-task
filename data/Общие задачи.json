@@ -1,0 +1,27 @@
+{
+	"title": "Общие задачи todo list",
+	"created": "Tue Aug 25 2015 22:35:37 GMT+0300 (Финляндия (лето))",
+	"tasks": [
+		{
+			"description": "Домен",
+			"done": false,
+			"term": "31-08-2015"
+		},
+		{
+			"description": "Проработать тестирования \"разворачивания\" сайта на Denwer",
+			"done": false
+		},
+		{
+			"description": "Выбрать макет сайта",
+			"done": false
+		},
+		{
+			"description": "Логотип и слоган",
+			"done": false
+		},
+		{
+			"description": "Техзадание по сайту",
+			"done": false
+		}
+	]
+}
