@@ -66,7 +66,6 @@
 				if (text !== '') {
 					text = new RegExp(text, "i");
 					$('.tableTask table').remove();
-					console.log(TodoList.tasks);
 					TodoList.tasks.forEach(function(element) {
 						if (text.test(element.description)) {
 							taskList.prototype.addTask(element);
@@ -132,7 +131,6 @@
 					description: inputText,
 					done: false
 				})
-				console.log(TodoList);
 				return TodoList
 			}).then(function(TodoList) {
 				return $.ajax({
@@ -269,7 +267,6 @@
 			nameActiveCategory = nameActiveCategory.substr(0, nameActiveCategory.length - 2);
 			$.get('./todos/' + nameActiveCategory, function(response) {
 				TodoList = response;
-				console.log(TodoList.tasks)
 			});
 			e = event;
 			$(event.target).css('background', 'none');
